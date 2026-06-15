@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random number</title>
+</head>
+<body bgcolor="Tangerine">
+    <h2 id="title">Random Number Generator</h2>
+    <button onclick="gen()">Generate</button>
+    <p id="num"></p>
+    <script>
+        document.body.style.textAlign = "center";
+        document.body.style.marginTop = "100px";
+        document.body.style.fontFamily = "Arial";
+        document.getElementById("title").style.color = "green";
+        function gen() {
+            let n = Math.floor(Math.random() * 100);
+            document.getElementById("num").innerHTML = "🎲 " + n;
+        }
+    </script>
+</body>
+</html>
