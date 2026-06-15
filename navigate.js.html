@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigate</title>
+</head>
+<body bgcolor="pink">
+    <h2 id="title">JavaScript page navigation is using code to automatically jump a user to a new website.</h2>
+    <button id="btn" onclick="goToPage()">Go to Page2</button>
+    <script>
+        document.body.style.textAlign = "center";
+        document.body.style.marginTop = "100px";
+        document.getElementById("title").style.color = "purple";
+        document.getElementById("btn").style.padding = "10px";
+        document.getElementById("btn").style.backgroundColor = "violet";
+        document.getElementById("btn").style.color = "black";
+        function goToPage() {
+            window.location.href = "page2.html";
+        }
+    </script>
+</body>
+</html>
