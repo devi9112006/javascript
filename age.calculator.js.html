@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age clculator</title>
+</head>
+<body bgcolor="skyblue">
+    <h2 id="title">Age Calculator</h2>
+    Enter Birth Year: <input type="number" id="year">
+    <button onclick="calc()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        document.body.style.textAlign = "center";
+        document.body.style.marginTop = "100px";
+        document.getElementById("title").style.color = "blue";
+        function calc() {
+            let year = document.getElementById("year").value;
+            let msg = document.getElementById("result");
+            if (year == "") {
+                msg.innerHTML = "❌ Please enter birth year!";
+                msg.style.color = "red";
+                return;
+            }
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - year;
+            if (age < 0) {
+                msg.innerHTML = "Invalid year!";
+                msg.style.color = "red";
+            } else {
+                msg.innerHTML = " Age: " + age;
+                msg.style.color = "purple";
+            }
+        }
+    </script>
+</body>
+</html>
