@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shake</title>
+</head>
+<body style="text-align:center;margin-top:50px;background-color: yellowgreen;">
+    <h1 id="heading">Shake Effect</h1>
+    <h2 id="title">The shake effect is a visual "head shake" (left-to-right wiggle) that instantly tells a user they
+        made a mistake.</h2>
+    <button id="btn" style="margin-top:10px;">Click Me</button>
+    <script>
+        document.getElementById("heading").style.color = "black";
+        document.getElementById("title").style.color = "purple";
+        let btn = document.getElementById("btn");
+        btn.style.padding = "10px";
+        btn.style.backgroundColor = "light gray";
+        btn.style.color = "black";
+        btn.style.border = "none";
+        btn.addEventListener("click", function () {
+            btn.style.transform = "translateX(-10px)";
+            setTimeout(() => { btn.style.transform = "translateX(5px)"; }, 100);
+            setTimeout(() => { btn.style.transform = "translateX(0)"; }, 200);
+        });
+    </script>
+</body>
+</html>
